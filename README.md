@@ -6,6 +6,8 @@ A Symfony bundle for [Mongrate](https://github.com/amyboyd/mongrate).
 Installation
 ============
 
+Mongrate Bundle is available [via Composer](https://packagist.org/packages/amyboyd/mongrate-bundle).
+
 Set your configuration in your Symfony application's config.yml:
 
     mongrate:
