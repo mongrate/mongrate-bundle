@@ -1,0 +1,14 @@
+{
+    "name": "amyboyd/mongrate-bundle",
+    "type": "library",
+    "description": "Symfony bundle for Mongrate",
+    "keywords": ["migrations", "mongodb", "database", "symfony"],
+    "homepage": "https://github.com/amyboyd/mongrate-bundle",
+    "authors": [
+        { "name": "Amy Boyd", "email": "amy@amyboyd.co.uk" }
+    ],
+    "require": {
+        "amyboyd/mongrate": "1.0.*",
+        "doctrine/mongodb": "1.2.*@dev"
+    }
+}
