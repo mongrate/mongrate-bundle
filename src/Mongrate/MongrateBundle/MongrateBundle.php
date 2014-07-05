@@ -17,5 +17,6 @@ class MongrateBundle extends Bundle
         $application->add(new \Mongrate\MongrateBundle\Command\GenerateMigrationCommand($config));
         $application->add(new \Mongrate\MongrateBundle\Command\UpCommand($config));
         $application->add(new \Mongrate\MongrateBundle\Command\DownCommand($config));
+        $application->add(new \Mongrate\MongrateBundle\Command\ListCommand($config));
     }
 }
