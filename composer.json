@@ -8,7 +8,7 @@
         { "name": "Amy Boyd", "email": "amy@amyboyd.co.uk" }
     ],
     "require": {
-        "amyboyd/mongrate": "~1.1"
+        "amyboyd/mongrate": "~1.3"
     },
     "minimum-stability": "stable"
 }
