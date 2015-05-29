@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/amyboyd/mongrate-bundle.svg?branch=master)](https://travis-ci.org/amyboyd/mongrate-bundle)
+
 Mongrate Bundle
 ===============
 
