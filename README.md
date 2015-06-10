@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/amyboyd/mongrate-bundle.svg?branch=master)](https://travis-ci.org/amyboyd/mongrate-bundle)
+[![Code Coverage](https://scrutinizer-ci.com/g/amyboyd/mongrate-bundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/amyboyd/mongrate-bundle/?branch=master)
 
 Mongrate Bundle
 ===============
@@ -34,7 +35,7 @@ mongrate:
 Usage
 =====
 
-See the commands available by running 
+See the commands available by running
 
 ```sh
 app/console list mongrate
