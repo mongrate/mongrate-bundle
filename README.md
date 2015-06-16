@@ -6,6 +6,15 @@ Mongrate Bundle
 
 A Symfony bundle for [Mongrate](https://github.com/amyboyd/mongrate).
 
+Available Commands:
+
+- [GenerateMigration](#generatemigration-command)
+- [List](#list-command)
+- [Test](#test-command)
+- [Up](#up-command)
+- [Down](#down-command)
+- [ToggleMigration](#togglemigration-command)
+
 Installation
 ============
 
@@ -40,6 +49,56 @@ See the commands available by running
 ```sh
 app/console list mongrate
 ```
+
+
+## GenerateMigration Command
+
+Generate a base migration backbone.
+
+```sh
+app/console mongrate:generate-migration <migration-name>
+```
+
+## List Command
+
+List all migrations and its statuses that indicates if the migrations was already applyed or not.
+
+```sh
+app/console mongrate:list-migrations
+```
+
+## Test Command
+
+Allow you to test your migrations up and down.
+
+```sh
+app/console mongrate:test <up|down> <migration-name>
+```
+
+## Up Command
+
+Apply your `up` migration.
+
+```sh
+app/console mongrate:up <migration-name>
+```
+
+## Down Command
+
+Apply your `down` migration that should rollback to previous state before applyed `up` migration.
+
+```sh
+app/console mongrate:down <migration-name>
+```
+
+## Toggle Command
+
+Toggle a migration `up` or `down`.
+
+```sh
+app/console mongrate:toggle <migration-name>
+```
+
 
 Contributing
 ============
