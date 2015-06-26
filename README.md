@@ -119,3 +119,9 @@ Install the Git pre-commit hook:
 ln -s ../../resources/pre-commit .git/hooks/pre-commit
 chmod a+x .git/hooks/pre-commit
 ```
+
+To run the tests:
+
+```sh
+vendor/bin/phpunit
+```
