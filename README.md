@@ -72,7 +72,7 @@ app/console mongrate:list-migrations
 Allow you to test your migrations up and down.
 
 ```sh
-app/console mongrate:test <up|down> <migration-name>
+app/console mongrate:test <migration-name> <up|down>
 ```
 
 ## Up Command
