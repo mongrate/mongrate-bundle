@@ -6,21 +6,12 @@ use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Tester\CommandTester;
 use Mongrate\MongrateBundle\Command\DownCommand;
 
-class DownCommandTest extends \PHPUnit_Framework_TestCase
+class DownCommandTest extends AbstractCommandTest
 {
     public function testCommandIsFound()
     {
-        $config = [
-            'migrations_directory' => '/',
-            'mongodb_server' => 'localhost',
-            'mongodb_db' => 'test'
-        ];
+        $this->application->add(new DownCommand($this->config));
 
-        $application = new Application();
-        $application->add(new DownCommand($config));
-
-        $command = $application->find('mongrate:down');
-        $this->assertEquals('mongrate:down', $command->getName());
+        $this->assertCommandIsFound('mongrate:down');
     }
-
 }
