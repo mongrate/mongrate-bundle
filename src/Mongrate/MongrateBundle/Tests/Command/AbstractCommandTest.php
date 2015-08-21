@@ -25,5 +25,6 @@ abstract class AbstractCommandTest extends \PHPUnit_Framework_TestCase
     {
         $command = $this->application->find($name);
         $this->assertEquals($name, $command->getName());
+        $this->assertNotEmpty($command->getDescription());
     }
 }
