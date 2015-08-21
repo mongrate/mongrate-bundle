@@ -1,10 +1,10 @@
-[![Build Status](https://travis-ci.org/amyboyd/mongrate-bundle.svg?branch=master)](https://travis-ci.org/amyboyd/mongrate-bundle)
+[![Build Status](https://travis-ci.org/mongrate/mongrate-bundle.svg?branch=master)](https://travis-ci.org/mongrate/mongrate-bundle)
 [![Code Coverage](https://scrutinizer-ci.com/g/amyboyd/mongrate-bundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/amyboyd/mongrate-bundle/?branch=master)
 
 Mongrate Bundle
 ===============
 
-A Symfony bundle for [Mongrate](https://github.com/amyboyd/mongrate).
+A Symfony bundle for [Mongrate](https://github.com/mongrate/mongrate).
 
 Available Commands:
 
@@ -104,8 +104,8 @@ Contributing
 ============
 
 Please submit pull requests on GitHub:
-* [MongrateBundle](https://github.com/amyboyd/mongrate-bundle/pulls)
-* [Mongrate](https://github.com/amyboyd/mongrate/pulls)
+* [MongrateBundle](https://github.com/mongrate/mongrate-bundle/pulls)
+* [Mongrate](https://github.com/mongrate/mongrate/pulls)
 
 Install [PHP-CS-Fixer](https://github.com/fabpot/PHP-CS-Fixer):
 
