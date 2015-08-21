@@ -6,21 +6,12 @@ use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Tester\CommandTester;
 use Mongrate\MongrateBundle\Command\GenerateMigrationCommand;
 
-class GenerateMigrationCommandTest extends \PHPUnit_Framework_TestCase
+class GenerateMigrationCommandTest extends AbstractCommandTest
 {
     public function testCommandIsFound()
     {
-        $config = [
-            'migrations_directory' => '/',
-            'mongodb_server' => 'localhost',
-            'mongodb_db' => 'test'
-        ];
+        $this->application->add(new GenerateMigrationCommand($this->config));
 
-        $application = new Application();
-        $application->add(new GenerateMigrationCommand($config));
-
-        $command = $application->find('mongrate:generate-migration');
-        $this->assertEquals('mongrate:generate-migration', $command->getName());
+        $this->assertCommandIsFound('mongrate:generate-migration');
     }
-
 }
