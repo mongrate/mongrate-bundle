@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/mongrate/mongrate-bundle.svg?branch=master)](https://travis-ci.org/mongrate/mongrate-bundle)
-[![Code Coverage](https://scrutinizer-ci.com/g/amyboyd/mongrate-bundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/amyboyd/mongrate-bundle/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/mongrate/mongrate-bundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/mongrate/mongrate-bundle/?branch=master)
 
 Mongrate Bundle
 ===============
