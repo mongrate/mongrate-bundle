@@ -21,10 +21,11 @@ abstract class AbstractCommandTest extends \PHPUnit_Framework_TestCase
         ];
     }
 
-    protected function assertCommandIsFound($name)
+    protected function assertCommandIsFound($name, $class)
     {
         $command = $this->application->find($name);
         $this->assertEquals($name, $command->getName());
         $this->assertNotEmpty($command->getDescription());
+        $this->assertInstanceOf($class, $command);
     }
 }

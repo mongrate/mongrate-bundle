@@ -12,6 +12,6 @@ class ToggleMigrationCommandTest extends AbstractCommandTest
     {
         $this->application->add(new ToggleMigrationCommand($this->config));
 
-        $this->assertCommandIsFound('mongrate:toggle');
+        $this->assertCommandIsFound('mongrate:toggle', ToggleMigrationCommand::class);
     }
 }

@@ -12,6 +12,6 @@ class DownCommandTest extends AbstractCommandTest
     {
         $this->application->add(new DownCommand($this->config));
 
-        $this->assertCommandIsFound('mongrate:down');
+        $this->assertCommandIsFound('mongrate:down', DownCommand::class);
     }
 }

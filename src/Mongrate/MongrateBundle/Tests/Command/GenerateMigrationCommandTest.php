@@ -12,6 +12,6 @@ class GenerateMigrationCommandTest extends AbstractCommandTest
     {
         $this->application->add(new GenerateMigrationCommand($this->config));
 
-        $this->assertCommandIsFound('mongrate:generate-migration');
+        $this->assertCommandIsFound('mongrate:generate-migration', GenerateMigrationCommand::class);
     }
 }
