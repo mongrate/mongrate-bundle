@@ -18,6 +18,9 @@
     },
     "minimum-stability": "stable",
     "require-dev": {
+        "symfony/http-kernel": ">=2.3.0",
+        "symfony/dependency-injection": ">=2.3.0",
+        "symfony/framework-bundle": ">=2.3.0",
         "phpunit/phpunit": "^4.6"
     }
 }
