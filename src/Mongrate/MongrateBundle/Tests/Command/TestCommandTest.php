@@ -12,7 +12,7 @@ class TestCommandTest extends AbstractCommandTest
     {
         $this->application->add(new TestCommand($this->config));
 
-        $this->assertCommandIsFound('mongrate:test');
+        $this->assertCommandIsFound('mongrate:test', TestCommand::class);
     }
 
 }

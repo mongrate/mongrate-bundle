@@ -12,6 +12,6 @@ class ListCommandTest extends AbstractCommandTest
     {
         $this->application->add(new ListCommand($this->config));
 
-        $this->assertCommandIsFound('mongrate:list-migrations');
+        $this->assertCommandIsFound('mongrate:list-migrations', ListCommand::class);
     }
 }

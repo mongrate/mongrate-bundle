@@ -12,6 +12,6 @@ class UpAllCommandTest extends AbstractCommandTest
     {
         $this->application->add(new UpAllCommand($this->config));
 
-        $this->assertCommandIsFound('mongrate:up-all');
+        $this->assertCommandIsFound('mongrate:up-all', UpAllCommand::class);
     }
 }
