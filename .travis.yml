@@ -5,8 +5,11 @@ env:
   - PREFER_LOWEST=""
 
 php:
-    - 5.4
+    # Although the bundle's implementation code works with PHP 5.4, the tests use `::class`
+    # which is only available since 5.5. 5.4 has reached it's end of life, so we won't bother
+    # with actively testing the implementation code against it.
     - 5.5
+    - 5.6
 
 services:
     - mongodb
