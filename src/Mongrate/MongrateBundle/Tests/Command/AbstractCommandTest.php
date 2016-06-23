@@ -3,6 +3,7 @@
 namespace Mongrate\MongrateBundle\Tests\Command;
 
 use Mongrate\MongrateBundle\MongrateBundle;
+use Mongrate\MongrateBundle\Tests\TestKernel;
 use Symfony\Component\Console\Application;
 use Symfony\Bundle\FrameworkBundle\Console\Application as FrameworkApplication;
 
@@ -38,19 +39,14 @@ abstract class AbstractCommandTest extends \PHPUnit_Framework_TestCase
         $mockContainer = $this->getMockBuilder('Symfony\Component\DependencyInjection\Container')
             ->setMethods(['getParameter'])
             ->getMock();
-        $mockContainer->expects($this->once())
+        $mockContainer->expects($this->any())
             ->method('getParameter')
+            ->with('mongrate_bundle')
             ->will($this->returnValue($this->config));
 
-        $mockKernel = $this->getMockBuilder('Symfony\Component\HttpKernel\Kernel')
-            ->disableOriginalConstructor()
-            ->setMethods(['getContainer'])
-            ->getMockForAbstractClass();
-        $mockKernel->expects($this->once())
-            ->method('getContainer')
-            ->will($this->returnValue($mockContainer));
+        $kernel = new TestKernel($mockContainer);
 
-        $frameworkApplication = new FrameworkApplication($mockKernel);
+        $frameworkApplication = new FrameworkApplication($kernel);
 
         $bundle = new MongrateBundle();
         $bundle->registerCommands($frameworkApplication);
