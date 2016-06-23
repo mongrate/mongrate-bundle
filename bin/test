@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Usage: bin/test
+# Or you can add any standard PHPUnit arguments: bin/test --filter DownCommandTest
+
+vendor/phpunit/phpunit/phpunit $*
