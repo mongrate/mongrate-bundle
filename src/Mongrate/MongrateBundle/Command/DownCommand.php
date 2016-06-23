@@ -2,12 +2,41 @@
 
 namespace Mongrate\MongrateBundle\Command;
 
-class DownCommand extends \Mongrate\Command\DownCommand
+use Mongrate\Configuration;
+use Mongrate\MongrateBundle\Service\ContainerAwareMigrationService;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\DependencyInjection\ContainerAwareInterface;
+use Symfony\Component\DependencyInjection\ContainerAwareTrait;
+
+class DownCommand extends \Mongrate\Command\DownCommand implements ContainerAwareInterface
 {
     use ExtendsStandaloneMongrateCommandTrait;
+    use ContainerAwareTrait;
+
+    /**
+     * @var ContainerAwareMigrationService
+     */
+    protected $service;
 
     public function __construct(array $config)
     {
         parent::__construct(null, $config);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function getMigrationService(Configuration $configuration)
+    {
+        return new ContainerAwareMigrationService($configuration);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function initialize(InputInterface $input, OutputInterface $output)
+    {
+        $this->service->setContainer($this->container);
     }
 }
