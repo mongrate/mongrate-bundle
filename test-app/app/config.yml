@@ -1,0 +1,10 @@
+framework:
+    secret: DoesNotMatter
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+        strict_requirements: ~
+
+mongrate:
+    mongodb_server: 'mongodb://localhost:27017'
+    mongodb_db: mongrate_bundle_test
+    migrations_directory: "%kernel.root_dir%/../../vendor/amyboyd/mongrate/resources/examples/"

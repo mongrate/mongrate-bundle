@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if [[ $SYMFONY_VERSION == '' ]]; then
+    echo 'You must set the SYMFONY_VERSION environment variable'
+    echo 'For example: SYMFONY_VERSION=2.8 test-app/bin/run-command mongrate:list-migrations'
+    exit 1
+fi
+
+rm -fr test-app/app/cache/*
+
+test-app/app/console $*

@@ -34,5 +34,17 @@ chmod a+x .git/hooks/pre-commit
 To run the tests:
 
 ```sh
-vendor/bin/phpunit
+bin/test
+```
+
+Test apps for different Symfony versions
+========================================
+
+In the test-app directory, there is an app with several `composer.json` files, one per Symfony
+version (currently 2.5, 2.8, 3.0 and 3.1). To install the test-app dependencies,
+run `test-app/bin/composer-install`. You can then test Mongrate bundle commands like this:
+
+```
+SYMFONY_VERSION=3.1 test-app/bin/run-command mongrate:list-migrations
+SYMFONY_VERSION=2.5 test-app/bin/run-command mongrate:up-all
 ```

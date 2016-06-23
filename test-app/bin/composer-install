@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+echo 'Installing dependencies'
+php composer.phar install
+
+function install_test_app_version() {
+    version=$1
+
+    echo 'Install dependencies for test app, using Symfony version' $version
+
+    SYMFONY_VERSION="$version" \
+        COMPOSER="composer-symfony-$version.json" \
+        COMPOSER_VENDOR_DIR="vendor-symfony-$version" \
+        php composer.phar install \
+        --working-dir=test-app
+}
+
+install_test_app_version 2.5
+install_test_app_version 2.8
+install_test_app_version 3.0
+install_test_app_version 3.1
